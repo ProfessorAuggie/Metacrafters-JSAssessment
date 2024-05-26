@@ -16,17 +16,5 @@ To use this project, follow these steps:
 4. Customize the code as needed or run it as-is.
 5. Run the code in a JavaScript environment such as Node.js or a web browser console.
 
-Example:
-Here's an example of how to use the project:
-// Mint some NFTs
-mintNFT("Vaibhav", "brown", "TShirt", "Watch");
-mintNFT("Haadi", "black", "Hoodie", "Bracelet");
-mintNFT("Auggie", "green", "Shirt", "Gold Chain");
-mintNFT("Insaan", "blue", "Long Dress", "Bracelet");
-
-// List NFTs and print total supply
-listNFTs();
-getTotalSupply();
-
 Contributor:
 Vaibhav Kushwaha (https://github.com/ProfessorAuggie)
