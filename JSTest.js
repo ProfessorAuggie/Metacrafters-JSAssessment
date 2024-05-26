@@ -9,45 +9,49 @@ Assessment Requirements
 */
 
 // create a variable to hold your NFT's
-const NFTs = [];
+const nftCollection = [];
+
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
-function mintNFT (name, eyecolor, shirtType, bling) {
-    const NFT = {
-        name: name,
-        eyecolor: eyecolor,
-        shirtType: shirtType,
-        bling: bling,
-      };
-      NFTs.push(NFT);
-      console.log("Minted \t" + name);   
+function mintNFT(title, artist, year, medium) {
+    // Creating an NFT object with provided metadata
+    const newNFT = {
+        title: title,
+        artist: artist,
+        year: year,
+        medium: medium
+    };
+    // Adding the newly created NFT to the collection
+    nftCollection.push(newNFT);
+    console.log(`NFT Created: ${title}`);
 }
 
 // create a "loop" that will go through an "array" of NFT's
 // and print their metadata with console.log()
-function listNFTs () {
-    for (let i = 0; i < NFTs.length; i++) {
-        console.log("\nID: \t\t" + (i + 1));
-        console.log("Name: \t\t" + NFTs[i].name);
-        console.log("Eyecolor: \t" + NFTs[i].eyecolor);
-        console.log("Shirt Type:\t" + NFTs[i].shirtType);
-        console.log("Bling: \t\t" + NFTs[i].bling);
-      }
-    
-
+function listNFTs() {
+    // Looping through the NFT collection and printing metadata
+    for (let i = 0; i < nftCollection.length; i++) {
+        console.log(`\nNFT #${i + 1}`);
+        console.log(`Title: ${nftCollection[i].title}`);
+        console.log(`Artist: ${nftCollection[i].artist}`);
+        console.log(`Year: ${nftCollection[i].year}`);
+        console.log(`Medium: ${nftCollection[i].medium}`);
+    }
 }
 
 // print the total number of NFTs we have minted to the console
 function getTotalSupply() {
-    console.log("\nTotal Supply: " + NFTs.length);
+    console.log(`\nTotal NFTs Created: ${nftCollection.length}`);
 }
-
 // call your functions below this line
-mintNFT("Vaibhav", "brown", "TShirt", "Watch");
-mintNFT("Haadi", "black", "Hoodie", "Bracelet");
-mintNFT("Auggie", "green", "Shirt", "Gold Chain");
-mintNFT("Insaan", "blue", "Long Dress", "Bracelet");
 
+mintNFT("Sunset at Juhu Beach", "Vaibhav", 2020, "Acrylic on Canvas");
+mintNFT("Mountain Bliss", "Haadi", 2018, "Watercolor on Paper");
+mintNFT("City Lights", "Auggie", 2019, "Digital Art");
+
+// Listing all minted NFTs
 listNFTs();
+
+// Printing the total supply of minted NFTs
 getTotalSupply();
